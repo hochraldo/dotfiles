@@ -15,3 +15,10 @@ fi
 if [ -e "${HOME}/.git-completion.bash" ] ; then
   source "${HOME}/.git-completion.bash"
 fi
+
+
+# Create tmp folder for vi
+
+if [ ! -d "${HOME}/.vitmp" ] ; then
+  mkdir "${HOME}/.vitmp"
+fi

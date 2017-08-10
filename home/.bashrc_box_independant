@@ -1,6 +1,5 @@
 # My bashrc which is box independant (work/home/...)
 
-
 # Aliases
 ########
 
@@ -16,4 +15,3 @@ alias l='ls -CF'
 alias vi='vim'
 
 alias g='git'
-alias screen='screen -h 5000'

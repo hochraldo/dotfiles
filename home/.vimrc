@@ -4,6 +4,11 @@ execute pathogen#infect()
 set encoding=utf-8
 :filetype on
 
+" store backup, undo, and swap files in temp directory
+set directory=$HOME/.vitmp
+set backupdir=$HOME/.vitmp
+set undodir=$HOME/.vitmp
+
 set nocompatible
 set history=200
 
