@@ -1,0 +1,26 @@
+[include]
+  path = .box_dep_gitconfig
+[core]
+  editor = vim
+	autocrlf = input
+[color]
+  ui = always
+[push]
+  default = upstream
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ci = commit
+  st = status
+  br = branch
+  co = checkout
+  pr = pull --rebase
+  spush = !sh -c 'mvn clean test && git push $1 $2 $3' -
+  # unpushed changes on all local branches
+  upc = log --branches --not --remotes --simplify-by-decoration --decorate --oneline 
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 1
+[user]
+	name = hochraldo
+	email = mario.hochreiter@gmail.com
