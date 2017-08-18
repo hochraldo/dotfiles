@@ -15,3 +15,18 @@ alias l='ls -CF'
 alias vi='vim'
 
 alias g='git'
+
+__git_complete g _git
+
+function parse_git_branch() {
+  NAME=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3-`
+  if [ "$NAME" == "master" ]; then
+    echo -e -n "\e[35m$NAME\e[0m"
+  elif [ "$NAME" == "develop" ]; then
+    echo -e -n "\e[32m$NAME\e[0m"
+  else
+    echo -e -n "\e[36m$NAME\e[0m"
+  fi
+}
+PS1="[\[\e[33m\]\W\[\e[0m\] \$(parse_git_branch)]# "
+
