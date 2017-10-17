@@ -21,3 +21,6 @@
 	enabled = true
 [help]
 	autocorrect = 1
+[user]
+	name = Mario Hochreiter
+	email = mario.hochreiter@gmail.com
