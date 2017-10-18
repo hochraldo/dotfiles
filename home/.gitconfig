@@ -14,6 +14,7 @@
   br = branch
   co = checkout
   pr = pull --rebase
+  rc = rebase --continue
   spush = !sh -c 'mvn clean test && git push $1 $2 $3' -
   # unpushed changes on all local branches
   upc = log --branches --not --remotes --simplify-by-decoration --decorate --oneline 
@@ -21,6 +22,8 @@
 	enabled = true
 [help]
 	autocorrect = 1
-[user]
-	name = Mario Hochreiter
-	email = mario.hochreiter@gmail.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
