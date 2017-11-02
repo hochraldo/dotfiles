@@ -15,6 +15,8 @@
   co = checkout
   pr = pull --rebase
   rc = rebase --continue
+  rf = rebase FETCH_HEAD
+  fo = fetch origin 
   spush = !sh -c 'mvn clean test && git push $1 $2 $3' -
   # unpushed changes on all local branches
   upc = log --branches --not --remotes --simplify-by-decoration --decorate --oneline 
