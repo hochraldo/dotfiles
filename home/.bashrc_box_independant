@@ -16,6 +16,11 @@ alias vi='vim'
 
 alias g='git'
 
+#Maven alias
+alias mdu='mvn versions:display-dependency-updates'
+alias mur='mvn -DgenerateBackupPoms=false versions:use-latest-releases'
+
+
 __git_complete g _git
 
 function parse_git_branch() {
